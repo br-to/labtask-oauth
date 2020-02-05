@@ -30,7 +30,8 @@ gem 'rails-i18n'
 gem 'devise-i18n'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'omniauth'
+gem 'omniauth-facebook'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

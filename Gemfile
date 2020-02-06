@@ -32,6 +32,7 @@ gem 'devise-i18n'
 # gem 'mini_magick', '~> 4.8'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-rails_csrf_protection'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'dotenv-rails'

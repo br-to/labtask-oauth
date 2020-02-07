@@ -8,7 +8,7 @@ class User < ApplicationRecord
     user = User.where(uid: auth.uid, provider: auth.provider).first
 
     unless user
-      user = User.create(uid: auth.uid, provider: auth.provider, email: User.dummy_email(auth), password: Devise.friendly_token[0, 20])
+      user = User.create(uid: auth.uid, provider: auth.provider, name: auth.extra.raw_info.name, email: User.dummy_email(auth), token: auth.credentials.token, image: auth.info.image,  password: Devise.friendly_token[0, 20])
     end
 
     user

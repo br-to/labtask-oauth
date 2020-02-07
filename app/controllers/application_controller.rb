@@ -1,10 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action  :authenticate_user!
 
-  def after_sign_out_path_for(resource)
-    new_user_session_path 
-  end
-
   rescue_from Exception, with: :error_500 unless Rails.env.development?
 
   rescue_from AbstractController::ActionNotFound, with: :error_404 unless Rails.env.development?
@@ -17,5 +13,9 @@ class ApplicationController < ActionController::Base
 
   def error_404
     render file: "#{Rails.root}/public/404.html", layout: false, status: 404
+  end
+
+  def after_sign_out_path_for(resource)
+    new_user_session_path 
   end
 end

@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :omniauthable
   
   def self.find_for_oauth(auth)
-    user = User.where(uid: auth.uid, provider: auth.provider).first
+    user = User.find_by(uid: auth.uid, provider: auth.provider)
 
     unless user
       user = User.create(uid: auth.uid, provider: auth.provider, name: auth.extra.raw_info.name, email: User.dummy_email(auth), token: auth.credentials.token, image: auth.info.image,  password: Devise.friendly_token[0, 20])

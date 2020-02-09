@@ -11,10 +11,10 @@
 
   <body>
     <% if user_signed_in? %>
-      <%= link_to t("title.logout"), destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
+      <%= link_to t("link.logout"), destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
     <% else %>
-      <%= link_to t("title.sign_up"), new_user_registration_path, class: 'navbar-link'  %> |
-      <%= link_to t("title.login"), new_user_session_path, class: 'navbar-link'  %>
+      <%= link_to t("link.sign_up"), new_user_registration_path, class: 'navbar-link'  %> |
+      <%= link_to t("link.login"), new_user_session_path, class: 'navbar-link'  %>
     <% end %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

@@ -2,11 +2,5 @@
   title:
     sign_up: 新規登録
     login: ログイン
-    logout: ログアウト
-    sign_in_with_facebook: Facebookでログイン
     profile_info: プロフィール情報
-    user: ユーザー名
-    email: メールアドレス
-    image: プロフィール画像
     forget_password: パスワードを忘れた?
-    send_email_reset_password: パスワードリセット用のメールを送る

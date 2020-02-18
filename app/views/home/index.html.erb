@@ -1,5 +1,5 @@
-<h1>プロフィール情報</h1>
-<p>ユーザー名:<%= current_user.name %></p>
-<p>メールアドレス：<%= current_user.email %></p>
-<p>プロフィール画像:<%= image_tag(current_user.image, size: 100) %></p>
-<p>JWT:<%= current_user.token %></p>
+<h1><%= t("title.profile_info") %></h1>
+<p><%= User.human_attribute_name(:user_name) %>:<%= current_user.name %></p>
+<p><%= User.human_attribute_name(:email) %>:<%= current_user.email %></p>
+<p><%= User.human_attribute_name(:image) %>:<%= image_tag(current_user.image, size: 100) %></p>
+<p><%= User.human_attribute_name(:jwt) %>:><%= current_user.token %></p>

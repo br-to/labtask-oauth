@@ -29,6 +29,11 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-
+/config/credentials.yml.enc
 # dotenv, dotenv-rails
 .env
+
+# ngrok
+.swp
+ngrok
+.DS_Store
